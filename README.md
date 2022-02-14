@@ -11,6 +11,7 @@ Clone the repo...
 Create a blog database and set user permissions as necessary.
 
 copy the `src/Blog/settings-dist.php` to `src/Blog/settings.php` and modify as needed 
+copy the `phinx-dist.php` to `phinx.php` and modify as needed 
 
 Issue a couple of commands 
 
