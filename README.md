@@ -4,7 +4,7 @@ Testing doctrine ORM
 
 Clone the repo...    
 
-`cd blog`
+`cd doctrine-playgroud` (or whatever you called it)
 
 `composer update` 
 
