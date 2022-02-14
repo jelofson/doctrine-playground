@@ -1,0 +1,5 @@
+vendor
+composer.lock
+settings.php
+phinx.php
+.htaccess
