@@ -18,8 +18,22 @@
 <p><?=nl2br($post->getPost()); ?></p>
 <p>
     <a href="<?=$router->urlFor('post-edit', ['id'=>$post->getId()]); ?>" class="btn btn-secondary">Edit</a>
-    <a href="<?=$router->urlFor('post-delete', ['id'=>$post->getId()]); ?>" class="btn btn-danger">Delete</a>
+    <a href="<?=$router->urlFor('post-delete', ['id'=>$post->getId()]); ?>" class="btn btn-danger" id="del-btn">Delete</a>
 
 </p>
 <hr>
 <p><a href="<?=$router->urlFor('posts'); ?>">Posts</a></p>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+        let btn = document.getElementById('del-btn');
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            let href = btn.getAttribute('href');
+            if (confirm('Do you really want to delete this?')) {
+                location.href = href;
+            }
+
+        });
+    }) 
+</script>
