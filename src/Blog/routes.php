@@ -44,18 +44,12 @@ $app->get('/tag/{id}', function (Request $request, Response $response, $args) {
     return $controller->read($args['id']);
 })->setName('tag');
 
+$app->get('/author/{id}', function (Request $request, Response $response, $args) {
+    $controller = new \Blog\Controller\User($this, $request, $response);
+    return $controller->read($args['id']);
+})->setName('author');
+
 $app->get('/test/{id}', function (Request $request, Response $response, $args) {
-    $entityManager = $this->get('entityManager');
-    $post = $entityManager->find(Blog\Entity\Post::class, $args['id']);
-    $author = new User();
-    $author->setEmail('jon@elofson.ca');
-    $author->setFirstName('Jon');
-    $author->setLastName('Elofson');
-
-    $post->setAuthor($author);
-    $entityManager->persist($author);
-    $entityManager->flush();
-
 
     return $response;
 })->setName('tag');

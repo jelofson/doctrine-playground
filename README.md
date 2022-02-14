@@ -1,6 +1,6 @@
 # doctrine-playground
-Testing doctrine ORM
 
+Testing Doctrine's ORM with [Slim framework](https://www.slimframework.com/), and a few other packages. 
 
 Clone the repo...    
 
